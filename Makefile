@@ -1,10 +1,11 @@
-IMAGE=selenium-headless-chrome
+IMAGE=shirou/selenium-headless-chrome
 
 build:
 	docker build -t $(IMAGE) .
 
 run:
 	docker run --rm \
+		-e URL=$(URL) \
 		-v `pwd`:/tmp \
 		$(IMAGE)
 

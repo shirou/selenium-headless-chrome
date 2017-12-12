@@ -1,32 +1,67 @@
 {
-    "containerDefinitions": [
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "logConfiguration": null,
+      "entryPoint": null,
+      "portMappings": [],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 1,
+      "environment": [
         {
-            "name": "example",
-            "image": "shirou/selenium-headless-chrome",
-            "memoryReservation": "256",
-            "cpu": "1",
-            "essential": true,
-            "portMappings": [],
-            "environment": [
-                {
-                    "name": "URL",
-                    "value": "https://s3-ap-northeast-1.amazonaws.com/foobar/example.py"
-                }
-            ],
-            "mountPoints": null,
-            "volumesFrom": null,
-            "hostname": null,
-            "user": null,
-            "workingDirectory": null,
-            "extraHosts": null,
-            "logConfiguration": null,
-            "ulimits": null,
-            "dockerLabels": null
+          "name": "URL",
+          "value": "https://s3-ap-northeast-1.amazonaws.com/foobar/example.py"
         }
-    ],
-    "volumes": [],
-    "networkMode": "bridge",
-    "placementConstraints": [],
-    "family": "example",
-    "taskRoleArn": ""
+      ],
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": "/tmp",
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": 256,
+      "volumesFrom": [],
+      "image": "shirou/selenium-headless-chrome",
+      "disableNetworking": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "privileged": null,
+      "name": "example"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": null,
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:999999999:task-definition/example:1",
+  "family": "example",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    }
+  ],
+  "requiresCompatibilities": null,
+  "networkMode": "bridge",
+  "cpu": null,
+  "revision": 1,
+  "status": "ACTIVE",
+  "volumes": []
 }

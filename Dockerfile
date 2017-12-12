@@ -17,6 +17,7 @@ RUN mkdir /noto && \
 
 RUN pip3 install selenium pyvirtualdisplay awscli boto3 requests
 
+ADD init.sh /tmp/init.sh
 WORKDIR /tmp
 
-CMD ["init.sh"]
+CMD ["/tmp/init.sh"]
