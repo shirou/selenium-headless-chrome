@@ -1,0 +1,32 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "example",
+            "image": "shirou/selenium-headless-chrome",
+            "memoryReservation": "256",
+            "cpu": "1",
+            "essential": true,
+            "portMappings": [],
+            "environment": [
+                {
+                    "name": "URL",
+                    "value": "https://s3-ap-northeast-1.amazonaws.com/foobar/example.py"
+                }
+            ],
+            "mountPoints": null,
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null
+        }
+    ],
+    "volumes": [],
+    "networkMode": "bridge",
+    "placementConstraints": [],
+    "family": "example",
+    "taskRoleArn": ""
+}

@@ -15,7 +15,7 @@ RUN mkdir /noto && \
     fc-cache -fv && \
     rm -rf /noto
 
-RUN pip3 install selenium pyvirtualdisplay awscli boto3
+RUN pip3 install selenium pyvirtualdisplay awscli boto3 requests
 
 WORKDIR /tmp
 
