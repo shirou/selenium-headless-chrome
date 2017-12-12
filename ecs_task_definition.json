@@ -11,8 +11,8 @@
       "cpu": 1,
       "environment": [
         {
-          "name": "URL",
-          "value": "https://s3-ap-northeast-1.amazonaws.com/foobar/example.py"
+          "name": "S3_URL",
+          "value": "s3://foobar/example.py"
         }
       ],
       "ulimits": null,
